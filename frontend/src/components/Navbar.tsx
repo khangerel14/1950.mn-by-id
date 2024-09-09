@@ -1,7 +1,4 @@
-"use client";
-
 import { Logo } from "@/images";
-import { useRef } from "react";
 
 export const Navbar = ({
   scrollToSection,

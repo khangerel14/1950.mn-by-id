@@ -22,24 +22,6 @@
     transparent 100%
   );
   background-size: 50px;
-  animation: animate_road 0.2s linear infinite;
-}
-
-/* @keyframes animate_road {
-  0% {
-    background-position: 50px 0;
-  }
-  100% {
-    background-position: 0px 0;
-  }
-} */
-@keyframes animate_road {
-  0% {
-    background-position: 50px 0;
-  }
-  100% {
-    background-position: 0px 0;
-  }
 }
 
 /* road */
@@ -47,7 +29,7 @@
 
 .car {
   max-width: 100%;
-  animation: car 2s linear;
+  animation: car 4.5s linear;
 }
 
 @keyframes car {
@@ -58,22 +40,19 @@
     transform: translateX(0.5%);
   }
   80% {
-    transform: translateX(-100%);
+    transform: translateX(-90%);
   }
   79.5% {
     transform: translateX(180%);
   }
-  40% {
-    transform: translateX(120%);
-  }
   30% {
-    transform: translateX(100%);
+    transform: translateX(89%);
   }
   20% {
-    transform: translateX(60%);
+    transform: translateX(54%);
   }
   10% {
-    transform: translateX(25%);
+    transform: translateX(23%);
   }
   5% {
     transform: translateX(10%);
@@ -88,18 +67,40 @@
 
 .wheel {
   width: 100%;
-  animation: wheel 2s linear infinite;
+  position: relative;
+  animation: moveAndRotate 4.5s linear;
 }
 
-@keyframes wheel {
+@keyframes moveAndRotate {
   0% {
-    transform: rotate(0deg);
+    transform: translateX(0%) rotate(0deg);
   }
-  0% {
-    transform: rotate(180deg);
+  5% {
+    transform: translateX(100%) rotate(36deg);
+  }
+  10% {
+    transform: translateX(250%) rotate(90deg);
+  }
+  20% {
+    transform: translateX(600%) rotate(216deg);
+  }
+  30% {
+    transform: translateX(1000%) rotate(360deg);
+  }
+  40% {
+    transform: translateX(1200%) rotate(432deg);
+  }
+  79.5% {
+    transform: translateX(1800%) rotate(648deg);
+  }
+  80% {
+    transform: translateX(-1000%) rotate(-360deg);
+  }
+  95% {
+    transform: translateX(0.5%) rotate(18deg);
   }
   100% {
-    transform: rotate(760deg);
+    transform: translateX(0%) rotate(0deg);
   }
 }
 

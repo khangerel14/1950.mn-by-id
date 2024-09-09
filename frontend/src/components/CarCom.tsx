@@ -4,7 +4,7 @@ export const CarCom = () => {
   return (
     <div className="mb-80">
       <div className="absolute z-10">
-        <div className="relative w-full">
+        <div className="relative w-full z-20">
           <Car />
         </div>
         <div className="flex items-center gap-14">
