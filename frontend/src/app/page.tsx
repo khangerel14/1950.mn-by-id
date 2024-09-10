@@ -25,13 +25,18 @@ export default function Home() {
       <section ref={introduction}>
         <About />
       </section>
-      <section ref={getInTouch}>
-        <CarCom />
-      </section>
+      <CarCom />
       <section ref={oppor}>
         <Chances />
       </section>
-      <Footer />
+      <section ref={getInTouch}>
+        <Footer
+          scrollToSection={scrollToSection}
+          introduction={introduction}
+          oppor={oppor}
+          getInTouch={getInTouch}
+        />
+      </section>
     </div>
   );
 }

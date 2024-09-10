@@ -1,20 +1,11 @@
-"use client";
-
 import { Apple, Logo, Playstore } from "@/images";
-import { useRouter } from "next/navigation";
 
-export const Footer = () => {
-  const router = useRouter();
-
-  const getInTouch = () => {
-    router.push("/getInTouch");
-  };
-  const introduction = () => {
-    router.push("/introduction");
-  };
-  const oppor = () => {
-    router.push("/opportunity");
-  };
+export const Footer = ({
+  scrollToSection,
+  oppor,
+  getInTouch,
+  introduction,
+}: any) => {
   return (
     <div className="flex flex-col items-center justify-end gap-16 text-white py-5 mt-14">
       <div className="flex flex-col gap-12 items-center">
@@ -36,13 +27,19 @@ export const Footer = () => {
           </button>
         </div>
         <div className="flex gap-14 text-gray-600">
-          <button className="text-gray" onClick={introduction}>
+          <button
+            className="text-gray"
+            onClick={() => scrollToSection(introduction)}
+          >
             Танилцуулга
           </button>
-          <button className="text-gray" onClick={oppor}>
+          <button className="text-gray" onClick={() => scrollToSection(oppor)}>
             Боломжууд
           </button>
-          <button className="text-gray" onClick={getInTouch}>
+          <button
+            className="text-gray"
+            onClick={() => scrollToSection(getInTouch)}
+          >
             Холбоо барих
           </button>
         </div>
